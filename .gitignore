@@ -1,0 +1,27 @@
+# Дизайн-файлы
+*.fig
+*.sketch
+*.xd
+blog-preview-card.FIG
+
+# Папка с дизайн-макетами
+design/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Настройки редакторов
+.vscode/
+.idea/
+
+# Временные файлы
+*.tmp
+*.temp
+*.log
+*.bak
+*.backup
+
+# Шаблоны (не нужны)
+README-template.md
