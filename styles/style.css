@@ -26,6 +26,7 @@ p {
 body {
   font-family: "Figtree", sans-serif;
   font-size: 16px;
+  line-height: 1.5;
   color: var(--color-gray-950);
   background-color: var(--color-yellow);
   min-height: 100vh;
@@ -57,9 +58,12 @@ body {
   border-radius: 20px;
   box-shadow: 8px 8px var(--color-gray-950);
   padding: 24px;
+  transition: box-shadow 0.3s ease;
+  will-change: box-shadow;
 }
 
 .card-image {
+  width: 336px;
   background-color: var(--color-yellow);
   border-radius: 10px;
   margin-bottom: 24px;
@@ -69,6 +73,8 @@ body {
 .card-link {
   text-decoration: none;
   color: inherit;
+  transition: color 0.3s ease;
+  will-change: color;
 }
 
 .card-link:hover,
@@ -82,16 +88,9 @@ body {
   opacity: 0.3;
 }
 
-.card-link:disabled {
-  pointer-events: none;
-  cursor: default;
-  opacity: 0.5;
-}
-
 .tags {
   display: flex;
   flex-wrap: wrap;
-  max-width: 336px;
   gap: 12px;
   padding-bottom: 12px;
 }
@@ -99,7 +98,6 @@ body {
 .tag {
   font-weight: 800;
   font-size: 0.875em;
-  line-height: 150%;
   background-color: var(--color-yellow);
   border-radius: 4px;
   padding: 4px 12px;
@@ -108,14 +106,12 @@ body {
 .date {
   font-weight: 500;
   font-size: 0.875em;
-  line-height: 150%;
   padding-bottom: 12px;
 }
 
 .title {
   font-weight: 800;
   font-size: 1.5em;
-  line-height: 150%;
   padding-bottom: 12px;
 }
 
@@ -123,7 +119,6 @@ body {
   font-weight: 500;
   font-size: 1em;
   color: var(--color-gray-500);
-  line-height: 150%;
   padding-bottom: 12px;
 }
 
@@ -131,7 +126,6 @@ body {
   margin-top: 12px;
   display: flex;
   flex-wrap: wrap;
-  max-width: 336px;
   align-items: center;
   gap: 12px;
 }
@@ -143,7 +137,6 @@ body {
 .author-name {
   font-weight: 800;
   font-size: 0.875em;
-  line-height: 150%;
 }
 
 .attribution {
@@ -152,12 +145,12 @@ body {
   font-weight: 500;
   font-size: 1em;
   color: var(--color-gray-500);
-  line-height: 150%;
 }
 
 .attribution a {
   font-weight: 800;
   color: var(--color-gray-950);
+  transition: color 0.3s ease;
 }
 
 .attribution a:hover,
@@ -171,8 +164,17 @@ body {
   opacity: 0.3;
 }
 
-.attribution a:disabled {
-  pointer-events: none;
-  cursor: default;
-  opacity: 0.5;
+@media (max-width: 375px) {
+
+  .card {
+    max-width: 327px;
+    min-height: auto;
+  }
+
+  .card-image {
+    width: 279px;
+    height: 200px;
+    object-fit: cover;
+    max-width: 279px;
+  }
 }
